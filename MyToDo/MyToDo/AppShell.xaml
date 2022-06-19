@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:MyToDo.Views"
+       xmlns:model ="clr-namespace:MyToDo.Models"
        Title="MyToDo"
        x:Class="MyToDo.AppShell">
 
@@ -30,7 +31,8 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Add" Icon="icon_about.png" Route="ToDoPage" ContentTemplate="{DataTemplate local:ToDoPage}" />
+        <ShellContent Title="Home" Icon="icon_about.png" Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}"  />
+        <ShellContent x:Name="Add" Title="Add" Icon="icon_about.png" Route="ToDoPage" ContentTemplate="{DataTemplate local:ToDoPage}"  />
     </TabBar>
 
     <!--

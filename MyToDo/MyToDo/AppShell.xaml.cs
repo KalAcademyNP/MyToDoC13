@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using MyToDo.Models;
 
 namespace MyToDo
 {
@@ -10,6 +11,7 @@ namespace MyToDo
         public AppShell()
         {
             InitializeComponent();
+            Add.BindingContext = new ToDo();
         }
 
     }
