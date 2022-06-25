@@ -39,7 +39,8 @@ namespace MyToDo.Views
             }
 
             File.WriteAllText(todo.FileName, editor.Text);
-            //await Navigation.PopModalAsync();
+            await Task.Delay(1000);
+            await Navigation.PopModalAsync();
         }
 
         private async void OnDeleteButtonClicked(object sender, EventArgs e)
@@ -50,7 +51,8 @@ namespace MyToDo.Views
                 File.Delete(todo.FileName);
             }
             editor.Text = String.Empty;
-            //await Navigation.PopModalAsync();
+            await Task.Delay(1000);
+            await Navigation.PopModalAsync();
         }
     }
 }
